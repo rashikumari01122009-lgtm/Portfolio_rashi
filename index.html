@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    background:#111827;
+    padding:20px;
+    position:fixed;
+    width:100%;
+    top:0;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:red;
+    text-decoration:none;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+section{
+    padding:100px 10%;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+.skill{
+    background:#1e293b;
+    padding:15px 25px;
+    border-radius:8px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+    text-align: center;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    padding:12px 20px;
+    background:#38bdf8;
+    border:none;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <h2>Portfolio</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <img src="rashi.jpg" height="200px"weight="200px"alt="my profile picture">
+        <h1>Hello, <span>I am RASHI</span></h1>
+        <h3>Web Developer</h3>
+        <p>I build modern and responsive websites.</p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <br>
+    <p>
+        I am a passionate web developer skilled in HTML, CSS,
+        JavaScript, Excel C-Programming and responsive design.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Git</div>
+         <div class="skill">Excel</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>Quiz App</h3>
+            <p>A small quiz app built with HTML, CSS and javascript.</p>
+        </div>
+
+        <div class="card">
+            <h3>calculator</h3>
+            <p>Simple calculator using HTML,CSS and Javascript.</p>
+        </div>
+
+        <div class="card">
+            <h3>To-Do List</h3>
+            <p>Task management application with local storage.</p>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name:Rashi Kumari" required>
+        <input type="email" placeholder="Your Email:rashi.kumari01122009@gmail.com" required>
+        <textarea type="number" placeholder="7970416975" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p id="msg"></p>
+</section>
+
+<footer>
+    <p>© 2026 Rashi Kumari | Portfolio Website</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    document.getElementById("msg").innerHTML =
+    "✅ Message Sent Successfully!";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
